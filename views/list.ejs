@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="box">
+        <h1 id="heading"><%= dayOfWeek %></h1>
+    </div>
+    <div class="box">
+        <% for(var i=0; i<items.length; i++){ %>
+      <div class="item">
+        <input type="checkbox">
+        <p><%= items[i] %></p>
+      </div>
+      <%}%>
+    </div>
+    <form action="/" method="post">
+      <input type="text" name="newItem" placeholder="New Item"></input>
+      <button type="submit" name="button">+</button>
+    </form>
+  </body>
+</html>
